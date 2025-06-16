@@ -103,8 +103,8 @@ class TaskManager extends Component
 
         $task->update(['status' => $newStatus]);
         $this->loadTasks();
-        
-        // Nessun messaggio di conferma per cambio status
+
+
     }
 
     public function loadTaskForShow($id)

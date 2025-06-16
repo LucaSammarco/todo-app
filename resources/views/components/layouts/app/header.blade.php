@@ -4,7 +4,7 @@
         @include('partials.head')
     </head>
     <body class="min-h-screen bg-white dark:bg-zinc-800">
-        <flux:header container class="border-b border-blue-200 bg-gradient-to-r from-blue-600 to-purple-600 dark:border-zinc-700 dark:bg-gradient-to-r dark:from-blue-800 dark:to-purple-800 h-16 shadow-lg">
+        <flux:header container class="bg-gradient-to-r from-blue-600 to-purple-600 dark:bg-gradient-to-r dark:from-blue-800 dark:to-purple-800 h-16 shadow-lg">
             <div class="flex items-center justify-between w-full h-full">
                 <div class="flex items-center">
                     <flux:sidebar.toggle class="lg:hidden mr-2" icon="bars-2" inset="left" />
@@ -22,14 +22,11 @@
 
                 <div class="flex items-center space-x-4">
                     <flux:navbar class="space-x-0.5 [&_svg]:text-gray-900 [&_button]:text-gray-900">
-                        <flux:tooltip :content="__('Search')" position="bottom">
-                            <flux:navbar.item class="!h-10 [&>div>svg]:size-5 text-gray-900 hover:text-gray-700" icon="magnifying-glass" href="#" :label="__('Search')" />
-                        </flux:tooltip>
                         <flux:tooltip content="Repository GitHub" position="bottom">
                             <flux:navbar.item
                                 class="h-10 max-lg:hidden [&>div>svg]:size-5 text-gray-900 hover:text-gray-700"
                                 icon="folder-git-2"
-                                href="#"
+                                href="https://github.com/LucaSammarco/todo-app"
                                 target="_blank"
                                 label="Repository"
                             />
@@ -109,7 +106,7 @@
                 <flux:navlist variant="outline">
                     <flux:navlist.group heading="Navigazione">
                         <flux:navlist.item icon="layout-grid" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>
-                        Dashboard
+                        Tasks
                         </flux:navlist.item>
                     </flux:navlist.group>
                 </flux:navlist>
@@ -133,7 +130,7 @@
             <flux:spacer />
 
             <flux:navlist variant="outline">
-                <flux:navlist.item icon="folder-git-2" href="#" target="_blank">
+                <flux:navlist.item icon="folder-git-2" href="https://github.com/LucaSammarco/todo-app" target="_blank">
                     Repository
                 </flux:navlist.item>
             </flux:navlist>

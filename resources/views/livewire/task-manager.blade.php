@@ -33,13 +33,13 @@
                     <div class="text-orange-500 text-3xl mb-3">⚠️</div>
                     <h3 class="text-lg font-semibold text-gray-900 mb-2">Eliminare task?</h3>
                     <p class="text-gray-600 text-sm mb-4">"{{ $taskToDelete->title }}"</p>
-                    
+
                     <div class="flex gap-2">
-                        <button wire:click="cancelDelete" 
+                        <button wire:click="cancelDelete"
                                 class="flex-1 px-3 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded text-sm transition-colors">
                             Annulla
                         </button>
-                        <button wire:click="delete" 
+                        <button wire:click="delete"
                                 class="flex-1 px-3 py-2 bg-red-500 hover:bg-red-600 text-white rounded text-sm transition-colors">
                             Elimina
                         </button>
