@@ -1,6 +1,6 @@
-<div class="max-w-4xl mx-auto">
+<div class="max-w-4xl mx-auto text-gray-900">`
     <!-- Card principale -->
-    <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+    <div class="bg-white rounded-2xl shadow-xl overflow-hidden text-gray-900">
         <!-- Header con gradient -->
         <div class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white p-8">
             <div class="flex justify-between items-start gap-6">

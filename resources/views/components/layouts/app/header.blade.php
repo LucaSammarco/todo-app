@@ -4,7 +4,7 @@
         @include('partials.head')
     </head>
     <body class="min-h-screen bg-white dark:bg-zinc-800">
-        <flux:header container class="border-b border-gray-200 border-opacity-30 bg-gradient-to-r from-blue-600 to-purple-600 dark:bg-gradient-to-r dark:from-blue-800 dark:to-purple-800 h-16 shadow-lg">
+        <flux:header container class="!bg-gradient-to-r from-blue-600 to-purple-600 dark:!bg-gradient-to-r dark:from-blue-800 dark:to-purple-800 border-b border-gray-200 border-opacity-30 h-16 shadow-lg">
             <div class="flex items-center justify-between w-full h-full">
                 <div class="flex items-center">
                     <flux:sidebar.toggle class="lg:hidden mr-2" icon="bars-2" inset="left" />
