@@ -5,8 +5,9 @@
 
         <!-- Status selector solo per l'assegnatario -->
         @if($task->assigned_to === auth()->id())
-            <select wire:change="updateTaskStatus({{ $task->id }}, $event.target.value)"
-                    class="text-xs border border-gray-300 bg-white px-2 py-1 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent cursor-pointer">
+            <select wire:key="task-status-{{ $task->id }}"
+                    wire:change="updateTaskStatus({{ $task->id }}, $event.target.value)"
+                    class="text-xs border border-gray-300 bg-white px-2 py-1 rounded-md focus:ring-2 focus:ring-gray-500 focus:border-transparent cursor-pointer">
                 <option value="pending" {{ $task->status === 'pending' ? 'selected' : '' }}>Da fare</option>
                 <option value="in_progress" {{ $task->status === 'in_progress' ? 'selected' : '' }}>In corso</option>
                 <option value="completed" {{ $task->status === 'completed' ? 'selected' : '' }}>Completata</option>

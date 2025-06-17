@@ -23,9 +23,11 @@
             <label for="due_date" class="block text-sm font-semibold text-gray-700 mb-2">Data di scadenza</label>
             <input type="date" id="due_date" wire:model="due_date"
                    min="{{ date('Y-m-d') }}"
-                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200">
+                   lang="it-IT"
+                   data-date-format="dd/mm/yyyy"
+                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-all duration-200">
             @error('due_date') <span class="text-red-500 text-sm mt-1 block">{{ $message }}</span> @enderror
-            <p class="text-xs text-gray-500 mt-1">La data deve essere oggi o nel futuro</p>
+            <p class="text-xs text-gray-500 mt-1">Formato: gg/mm/aaaa - La data deve essere oggi o nel futuro</p>
         </div>
 
         @if(auth()->user()->hasRole('manager'))

@@ -65,15 +65,17 @@ class TaskSeeder extends Seeder
     'Creare report finanziario trimestrale',
 ];
 
-        $statuses = ['pending', 'completed', 'in_progress'];        foreach ($taskTitles as $title) {
+        $statuses = ['pending', 'completed', 'in_progress'];
+
+        foreach ($taskTitles as $title) {
             // SOLO I MANAGER creano le task
-            $creator = $managers->isNotEmpty() 
-                ? $managers->random() 
+            $creator = $managers->isNotEmpty()
+                ? $managers->random()
                 : User::first(); // fallback se non ci sono manager
-            
+
             // TUTTE le task assegnate agli employee
-            $assignee = $employees->isNotEmpty() 
-                ? $employees->random() 
+            $assignee = $employees->isNotEmpty()
+                ? $employees->random()
                 : User::first(); // fallback se non ci sono employee
 
             // Date casuali
