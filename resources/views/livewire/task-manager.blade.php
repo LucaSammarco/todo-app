@@ -25,7 +25,7 @@
         @include('livewire.task-manager.task-list')
     @endif
 
-    <!-- Modale SEMPLICE davanti alla pagina -->
+    <!-- Modale Eliminazione -->
     @if($showDeleteModal && $taskToDelete)
         <div class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
             <div class="bg-white rounded-lg shadow-lg border border-gray-300 p-6 w-80">
