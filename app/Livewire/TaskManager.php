@@ -29,7 +29,7 @@ class TaskManager extends Component
     {
         $this->loadTasks();
 
-        // Carica lista utenti per i manager
+        // Carica lista utenti per i manager da implmentare dopo 
         if (auth()->user()->hasRole('manager')) {
             $this->users = User::orderBy('name')->get();
         }

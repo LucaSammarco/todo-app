@@ -47,8 +47,8 @@ DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=todo_db
-DB_USERNAME=luca
-DB_PASSWORD=unaPasswordSicura
+DB_USERNAME=admin
+DB_PASSWORD=password
 ```
 
 ### 5. Esegui le migrazioni e i seeder
